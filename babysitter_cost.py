@@ -28,7 +28,7 @@ def main():
     else: # Includes some base rated minutes and some overtime rated minutes
         base_rated_minutes = (21 - start_h) * 60 - start_m
         base_rated_hours = base_rated_minutes / 60
-        base_cost = base_rated_hours * 2.50
+        base_cost = base_rated_hours * base_rate
         overtime_minutes = (end_h - 21) * 60 + end_m
         overtime_rated_hours = overtime_minutes / 60
         overtime_cost = overtime_rated_hours * overtime_rate
