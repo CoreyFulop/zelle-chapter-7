@@ -22,11 +22,9 @@ def main():
     if end_h < 21: # Period ends before overtime cutoff
         total_cost = cost_calculate(start_h, end_h, start_m, end_m, base_rate)
         print(f"The total cost for the babysitter is ${total_cost:.2f}.")
-
     elif start_h >= 21: # All minutes are overtime 
         total_cost = cost_calculate(start_h, end_h, start_m, end_m, overtime_rate)
         print(f"The total cost for the babysitter is ${total_cost:.2f}.")
-
     else: # Includes some base rated minutes and some overtime rated minutes
         base_rated_minutes = (21 - start_h) * 60 - start_m
         base_rated_hours = base_rated_minutes / 60
